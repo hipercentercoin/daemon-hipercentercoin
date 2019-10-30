@@ -15,7 +15,7 @@ sudo apt-get upgrade
 
 sudo apt-get install libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libdb-dev libdb++-dev libminiupnpc-dev
 
-##Download the daemon from MyCoin. (Available for a paid coin)
+##Download the daemon from Github
 
 wget "https://github.com/hipercentercoin/daemon-hipercentercoin/raw/master/hipercentercoin-daemon-linux.tar.gz" -O hipercentercoin-daemon-linux.tar.gz
 
