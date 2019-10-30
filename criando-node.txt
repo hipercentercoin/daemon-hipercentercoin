@@ -1,0 +1,49 @@
+##How do I setup a node on Ubuntu Server 18.04? (Scrypt PoW/PoS)
+##applies to Scrypt PoW/PoS
+##branch 1.2.5.2
+
+##Use the following instructions to setup a node on Ubuntu Server 18.04.
+
+##Install Ubuntu Server 18.04 on a VPS.
+
+##Update your Ubuntu machine.
+
+sudo apt-get update
+sudo apt-get upgrade
+
+##Install the required dependencies.
+
+sudo apt-get install libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libdb-dev libdb++-dev libminiupnpc-dev
+
+##Download the daemon from MyCoin. (Available for a paid coin)
+
+wget "https://github.com/hipercentercoin/daemon-hipercentercoin/raw/master/hipercentercoin-daemon-linux.tar.gz" -O hipercentercoin-daemon-linux.tar.gz
+
+##Extract the tar file.
+
+tar -xzvf hipercentercoin-daemon-linux.tar.gz
+
+##Install the daemon.
+
+sudo mv hipercentercoind /usr/bin/
+
+##Create the config file.
+
+mkdir $HOME/.hipercentercoin
+nano $HOME/.examplecoin/hipercentercoin.conf
+
+##Paste the following lines in hipercentercoin.conf.
+
+rpcuser=rpc_hipercentercoin
+rpcpassword=69c863e3356d3dae95df454a1
+rpcallowip=127.0.0.1
+listen=1
+server=1
+txindex=1
+staking=0
+daemon=1
+addnode=66.42.102.211
+
+##Start your node with the following command.
+
+hipercentercoind
